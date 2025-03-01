@@ -14,6 +14,8 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
         rel="stylesheet" />
+        <!-- font awesome -->
+        <script src="https://kit.fontawesome.com/ce4e831da4.js" crossorigin="anonymous"></script>
 
     <style>
         /* google font */
@@ -23,35 +25,39 @@
             font-style: normal;
         }
 
-        .ellipsis{
-           background-color: rgb(255, 255, 255);
+        .ellipsis {
+            background-color: rgb(255, 255, 255);
             text-overflow: ellipsis;
             overflow: hidden;
-            
+
             display: -webkit-box;
-            -webkit-box-orient : vertical;
-            -webkit-line-clamp : 2;
-           
-    
-    
- 
-          
+            -webkit-box-orient: vertical;
+            -webkit-line-clamp: 2;
+            width: 300px;
+            max-width: 100%;
+
+
+
+
+
         }
+
         /* dark green color */
-        .dark-green{
+        .dark-green {
             color: #00303C;
         }
-        .text-color{
+
+        .text-color {
             color: #7a7a7a;
         }
-         .blue-color{
-            color: #3752FD;
-         }
 
+        .blue-color {
+            color: #3752FD;
+        }
     </style>
 </head>
 
-<body class="w-[1536px] h-[100px] mx-auto poppins-font bg-[#f2f3f5]">
+<body class="w-[1536px] h-[100px] mx-auto poppins-font bg-[#eaecee]">
     <header class="w-[#1536px] h-[100px]">
         <nav class="pt-4 ">
             <div class="navbar bg-base-100 shadow-sm rounded-2xl ">
@@ -72,7 +78,7 @@
                     </div>
                     <div class="dropdown dropdown-end mr-8 ">
 
-                        <div class="lg:w-10 rounded-full lg:mb-5 lg:mb-3 btn btn-ghost btn-circle avatar mt-1">
+                        <div class="lg:w-10 rounded-full lg:mb-5 mb-3 btn btn-ghost btn-circle avatar mt-1">
                             <img alt="theme button " src="./assets/theme-btn.png" />
                         </div>
 
@@ -86,164 +92,195 @@
     </header>
 
     <!-- discover something -->
-    <section class="w-[1186px] h-[918px] mt-10 bg-base-100  shadow-xl ">
-        <div class="flex gap-3 justify-between p-8">
-            <!--small card --1 -->
+    <section class="big-section flex mt-3  pt-4 bg-[#e9ebed] ">
+        <section class="w-[1186px] h-[918px] mt-10 bg-base-100  shadow-xl ">
+            <div class="flex gap-3 justify-between p-5 mb-8 rounded-xl ">
+                <!--small card --1 -->
 
-            <div class="flex items-center gap-5 bg-base-100 w-[263px] h-[128px] shadow-sm rounded-lg  bg-[#f1f2f3]">
-                <div class="rounded-full bg-white shadow-sm flex h-16 w-16 ml-4 items-center justify-center">
-                    <img class="w-6 h-6 " src="./assets/checkbox.png" alt="">
+                <div class="flex items-center gap-5 bg-base-100 w-[263px] h-[128px] shadow-sm rounded-lg  bg-[#e9eef3]">
+                    <div class="rounded-full bg-white shadow-sm flex h-16 w-16 ml-4 items-center justify-center">
+                        <img class="w-6 h-6 " src="./assets/checkbox.png" alt="">
+                    </div>
+
+                    <div class="">
+                        <h2 class="card-title text-[#00303C] text-sm font-normal">Task Assigned </h2>
+                        <p class="text-[#00303C] font-extrabold text-3xl">05</p>
+                    </div>
+                </div>
+                <!--card : linear card -->
+                <div
+                    class="flex  items-center  bg-base-100 w-[550px] h-[128px] shadow-sm  bg-[#f1f2f3]  bg-gradient-to-r from-[#3752FD] to-[#9BA8F8] gap-6 rounded-xl">
+                    <div class="rounded-full flex ml-4 items-center justify-center">
+                        <img class="w-20 h-20 ml-5 " src="./assets/board.png" alt="">
+                    </div>
+
+                    <div class="">
+                        <h2 class="card-title text-xl font-medium text-white">Discover Something <br> New Today! </h2>
+                    </div>
                 </div>
 
-                <div class="">
-                    <h2 class="card-title text-[#00303C] text-sm font-normal">Task Assigned </h2>
-                    <p class="text-[#00303C] font-extrabold text-3xl">05</p>
+                <!--small card -3 -->
+
+                <div class="flex items-center gap-3 bg-base-100 w-[263px] h-[128px] shadow-sm rounded-lg bg-[#f1f2f3]">
+                    <div class="rounded-full bg-white shadow-sm flex h-16 w-16 ml-4 items-center justify-center">
+                        <img class="w-6 h-6 " src="./assets/calender.png" alt="">
+                    </div>
+
+                    <div class="">
+                        <p class="text-[#00303C] text-2xl font-normal">Wed,</p>
+                        <p class="card-title text-[#00303C] font-bold text-2xl">Jul 28 2025</p>
+
+                    </div>
                 </div>
             </div>
-            <!--card : linear card -->
-            <div class="flex  items-center  bg-base-100 w-[550px] h-[128px] shadow-sm rounded-lg  bg-[#f1f2f3] ">
-                <div class="rounded-full flex ml-4 items-center justify-center">
-                    <img class="w-20 h-20 " src="./assets/board.png" alt="">
-                </div>
-
-                <div class="">
-                    <h2 class="card-title">Discover Something <br> New Today! </h2>
-                </div>
-            </div>
-
-            <!-- card -3 -->
-
-            <div class="flex items-center gap-3 p-4 bg-base-100 w-[263px] h-[128px] shadow-sm rounded-lg  bg-[#f1f2f3]">
-                <div class="rounded-full bg-white shadow-sm flex h-16 w-16 ml-4 items-center justify-center">
-                    <img class="w-6 h-6 " src="./assets/calender.png" alt="">
-                </div>
-
-                <div class="">
-                    <p class="card-title text-[#00303C] text-sm font-normal"><span class="font-normal text-2xl">
-                            Wed,</span> <br><span class="text-2xl font-semibold mt-2 block"> Jul 28 2025</span> </p>
-                    <br>
-
-                </div>
-            </div>
-
-        </div>
-        <h1 class="border-t-2 border-dashed border-gray-200"></h1>
+            <h1 class=" border-t-2 border-dashed border-gray-200"></h1>
 
 
-        <!-- big cardss -->
-        <div class="card-container p-8">
 
-           <!-- Big Catd -1 -->
-            <div class="card w-[342px] h-[317px] bg-base-100 card-xl shadow-sm p-4 bg-[#f2f3f5] ">
-                <button class="btn w-36 ml-5">ShopEase</button>
-                <div class="card-body  rounded-lg   ">
-                    <h2 class="text-xl font-medium dark-green ">Fix Mobile Button Issue </h2>
-                    <p class="ellipsis line-clamp-2 rounded-xl text-xs font-normal text-[#7a7a7a] p-4">Debug using Chrome <br> DevTools, check for overlapping elements, and ensure onClick works properly
-                        and ensure onClick works properly</p>
+            <!-- big cardss -->
+            <section class="">
+                <div class="card-container p-8 grid grid-cols-3 gap-6 ">
 
-                        <h1 class=" border-t-2 border-dashed border-gray-200"></h1>
-                    <div class=" justify-end card-actions flex gap-5 mt-3">
-                        <div>
-                            <p class="text-color text-xs">Deadline</p>
-                            <h1 class="dark-green font-normal text-sm">21 March 2025</h1>
+                    <!-- Big Catd -1  -->
+                    <div class="card w-[342px] h-[317px] bg-base-100 card-xl shadow-sm p-4 bg-[#f2f3f5] ">
+                        <button class="btn w-36 ml-5">ShopEase</button>
+                        <div class="card-body  rounded-lg   ">
+                            <h2 class="text-xl font-medium dark-green ">Fix Mobile Button Issue </h2>
+                            <p class="ellipsis line-clamp-2 rounded-xl text-xs font-normal text-[#7a7a7a] p-4 mb-5">
+                                Debug using
+                                Chrome <br> DevTools, check for overlapping elements, and ensure onClick works properly
+                                and ensure onClick works properly</p>
+
+                            <h1 class=" border-t-2 border-dashed border-gray-200"></h1>
+                            <div class=" justify-end card-actions flex gap-5 mt-3">
+                                <div>
+                                    <p class="text-color text-xs">Deadline</p>
+                                    <h1 class="dark-green font-normal text-sm">21 March 2025</h1>
+                                </div>
+                                <button class="btn btn-primary bg-[#3752FD] border-none">Completed</button>
+                            </div>
                         </div>
-                        <button class="btn btn-primary bg-[#3752FD] border-none">Completed</button>
                     </div>
-                </div>
-           <!-- Big Catd -2 -->
-            <div class="card w-[342px] h-[317px] bg-base-100 card-xl shadow-sm p-4 bg-[#f2f3f5] ">
-                <button class="btn w-36 ml-5">ShopEase</button>
-                <div class="card-body  rounded-lg   ">
-                    <h2 class="text-xl font-medium dark-green ">Fix Mobile Button Issue </h2>
-                    <p class="ellipsis line-clamp-2 rounded-xl text-xs font-normal text-[#7a7a7a] p-4">Debug using Chrome <br> DevTools, check for overlapping elements, and ensure onClick works properly
-                        and ensure onClick works properly</p>
+                    <!-- Big Catd -2 -->
+                    <div class="card w-[342px] h-[317px] bg-base-100 card-xl shadow-sm p-4 bg-[#f2f3f5] ">
+                        <button class="btn w-36 ml-5">CloudSync</button>
+                        <div class="card-body  rounded-lg   ">
+                            <h2 class="text-xl font-medium dark-green ">Add Dark Mode</h2>
+                            <p class="ellipsis line-clamp-2 rounded-xl text-xs font-normal text-[#7a7a7a] p-4 mb-5">
+                                Store the user's preference in localStorage, update CSS vari <br> ables dynamically, and
+                                apply a smooth transition effect.
 
-                        <h1 class=" border-t-2 border-dashed border-gray-200"></h1>
-                    <div class=" justify-end card-actions flex gap-5 mt-3">
-                        <div>
-                            <p class="text-color text-xs">Deadline</p>
-                            <h1 class="dark-green font-normal text-sm">21 March 2025</h1>
+                            <h1 class=" border-t-2 border-dashed border-gray-200"></h1>
+                            <div class=" justify-end card-actions flex gap-5 mt-3">
+                                <div>
+                                    <p class="text-color text-xs">Deadline</p>
+                                    <h1 class="dark-green font-normal text-sm">21 March 2025</h1>
+                                </div>
+                                <button class="btn btn-primary bg-[#3752FD] border-none">Completed</button>
+                            </div>
                         </div>
-                        <button class="btn btn-primary bg-[#3752FD] border-none">Completed</button>
                     </div>
-                </div>
-           <!-- Big Catd -3 -->
-            <div class="card w-[342px] h-[317px] bg-base-100 card-xl shadow-sm p-4 bg-[#f2f3f5] ">
-                <button class="btn w-36 ml-5">ShopEase</button>
-                <div class="card-body  rounded-lg   ">
-                    <h2 class="text-xl font-medium dark-green ">Fix Mobile Button Issue </h2>
-                    <p class="ellipsis line-clamp-2 rounded-xl text-xs font-normal text-[#7a7a7a] p-4">Debug using Chrome <br> DevTools, check for overlapping elements, and ensure onClick works properly
-                        and ensure onClick works properly</p>
+                    <!-- Big Catd -3 -->
+                    <div class="card w-[342px] h-[317px] bg-base-100 card-xl shadow-sm p-4 bg-[#f2f3f5] ">
+                        <button class="btn w-36 ml-5">SwiftPay</button>
+                        <div class="card-body  rounded-lg   ">
+                            <h2 class="text-xl font-medium dark-green ">Optimize Home page  </h2>
+                            <p class="ellipsis line-clamp-2 rounded-xl text-xs font-normal text-[#7a7a7a] p-4 mb-5">
+                                Debug using Chrome DevTools, check for overlappi <br> ng elements, and ensure onClick
+                                works properly
+                                and ensure onClick works properly</p>
 
-                        <h1 class=" border-t-2 border-dashed border-gray-200"></h1>
-                    <div class=" justify-end card-actions flex gap-5 mt-3">
-                        <div>
-                            <p class="text-color text-xs">Deadline</p>
-                            <h1 class="dark-green font-normal text-sm">21 March 2025</h1>
+                            <h1 class=" border-t-2 border-dashed border-gray-200"></h1>
+                            <div class=" justify-end card-actions flex gap-5 mt-3">
+                                <div>
+                                    <p class="text-color text-xs">Deadline</p>
+                                    <h1 class="dark-green font-normal text-sm">21 March 2025</h1>
+                                </div>
+                                <button class="btn btn-primary bg-[#3752FD] border-none">Completed</button>
+                            </div>
                         </div>
-                        <button class="btn btn-primary bg-[#3752FD] border-none">Completed</button>
                     </div>
-                </div>
-           <!-- Big Catd -4 -->
-            <div class="card w-[342px] h-[317px] bg-base-100 card-xl shadow-sm p-4 bg-[#f2f3f5] ">
-                <button class="btn w-36 ml-5">ShopEase</button>
-                <div class="card-body  rounded-lg   ">
-                    <h2 class="text-xl font-medium dark-green ">Fix Mobile Button Issue </h2>
-                    <p class="ellipsis line-clamp-2 rounded-xl text-xs font-normal text-[#7a7a7a] p-4">Debug using Chrome <br> DevTools, check for overlapping elements, and ensure onClick works properly
-                        and ensure onClick works properly</p>
+                    <!-- Big Catd -4 -->
+                    <div class="card w-[342px] h-[317px] bg-base-100 card-xl shadow-sm p-4 bg-[#f2f3f5] ">
+                        <button class="btn w-36 ml-5">Meta</button>
+                        <div class="card-body  rounded-lg   ">
+                            <h2 class="text-xl font-medium dark-green ">Add new emoji 🤲 </h2>
+                            <p class="ellipsis line-clamp-2 rounded-xl text-xs font-normal text-[#7a7a7a] p-4 mb-5">
+                                Debug using Chrome DevTools, check for overlappi <br> ng elements, and ensure onClick
+                                works properly
+                                and ensure onClick works properly</p>
 
-                        <h1 class=" border-t-2 border-dashed border-gray-200"></h1>
-                    <div class=" justify-end card-actions flex gap-5 mt-3">
-                        <div>
-                            <p class="text-color text-xs">Deadline</p>
-                            <h1 class="dark-green font-normal text-sm">21 March 2025</h1>
+                            <h1 class=" border-t-2 border-dashed border-gray-200"></h1>
+                            <div class=" justify-end card-actions flex gap-5 mt-3">
+                                <div>
+                                    <p class="text-color text-xs">Deadline</p>
+                                    <h1 class="dark-green font-normal text-sm">21 March 2025</h1>
+                                </div>
+                                <button class="btn btn-primary bg-[#3752FD] border-none">Completed</button>
+                            </div>
                         </div>
-                        <button class="btn btn-primary bg-[#3752FD] border-none">Completed</button>
                     </div>
-                </div>
-           <!-- Big Catd -5 -->
-            <div class="card w-[342px] h-[317px] bg-base-100 card-xl shadow-sm p-4 bg-[#f2f3f5] ">
-                <button class="btn w-36 ml-5">ShopEase</button>
-                <div class="card-body  rounded-lg   ">
-                    <h2 class="text-xl font-medium dark-green ">Fix Mobile Button Issue </h2>
-                    <p class="ellipsis line-clamp-2 rounded-xl text-xs font-normal text-[#7a7a7a] p-4">Debug using Chrome <br> DevTools, check for overlapping elements, and ensure onClick works properly
-                        and ensure onClick works properly</p>
+                    <!-- Big Catd -5 -->
+                    <div class="card w-[342px] h-[317px] bg-base-100 card-xl shadow-sm p-4 bg-[#f2f3f5] ">
+                        <button class="btn w-36 ml-5">Google LLC</button>
+                        <div class="card-body  rounded-lg   ">
+                            <h2 class="text-xl font-medium dark-green ">Integrate OpenAI API </h2>
+                            <p class="ellipsis line-clamp-2 rounded-xl text-xs font-normal text-[#7a7a7a] p-4 mb-5">
+                                Debug using Chrome DevTools, check for overlappi <br> ng elements, and ensure onClick
+                                works properly
+                                and ensure onClick works properly</p>
 
-                        <h1 class=" border-t-2 border-dashed border-gray-200"></h1>
-                    <div class=" justify-end card-actions flex gap-5 mt-3">
-                        <div>
-                            <p class="text-color text-xs">Deadline</p>
-                            <h1 class="dark-green font-normal text-sm">21 March 2025</h1>
+                            <h1 class=" border-t-2 border-dashed border-gray-200"></h1>
+                            <div class=" justify-end card-actions flex gap-5 mt-3">
+                                <div>
+                                    <p class="text-color text-xs">Deadline</p>
+                                    <h1 class="dark-green font-normal text-sm">21 March 2025</h1>
+                                </div>
+                                <button class="btn btn-primary bg-[#3752FD] border-none">Completed</button>
+                            </div>
                         </div>
-                        <button class="btn btn-primary bg-[#3752FD] border-none">Completed</button>
                     </div>
-                </div>
-           <!-- Big Catd -6 -->
-            <div class="card w-[342px] h-[317px] bg-base-100 card-xl shadow-sm p-4 bg-[#f2f3f5] ">
-                <button class="btn w-36 ml-5">ShopEase</button>
-                <div class="card-body  rounded-lg   ">
-                    <h2 class="text-xl font-medium dark-green ">Fix Mobile Button Issue </h2>
-                    <p class="ellipsis line-clamp-2 rounded-xl text-xs font-normal text-[#7a7a7a] p-4">Debug using Chrome <br> DevTools, check for overlapping elements, and ensure onClick works properly
-                        and ensure onClick works properly</p>
+                    <!-- Big Catd -6 -->
+                    <div class="card w-[342px] h-[317px] bg-base-100 card-xl shadow-sm p-2 bg-[#f2f3f5] ">
+                        <button class="btn w-36 ml-5">Glassdoar</button>
+                        <div class="card-body  rounded-lg   ">
+                            <h2 class="text-xl font-medium dark-green ">Improve Job searching </h2>
+                            <p class="ellipsis line-clamp-2 rounded-xl text-xs font-normal text-[#7a7a7a] p-4 mb-5">
+                                Debug using Chrome DevTools, check for overlappi <br> ng elements, and ensure onClick
+                                works properly
+                                and ensure onClick works properly</p>
 
-                        <h1 class=" border-t-2 border-dashed border-gray-200"></h1>
-                    <div class=" justify-end card-actions flex gap-5 mt-3">
-                        <div>
-                            <p class="text-color text-xs">Deadline</p>
-                            <h1 class="dark-green font-normal text-sm">21 March 2025</h1>
+                            <h1 class=" border-t-2 border-dashed border-gray-200"></h1>
+                            <div class=" justify-end card-actions flex gap-5 mt-3">
+                                <div>
+                                    <p class="text-color text-xs">Deadline</p>
+                                    <h1 class="dark-green font-normal text-sm">21 March 2025</h1>
+                                </div>
+                                <button class="btn btn-primary bg-[#3752FD] border-none">Completed</button>
+                            </div>
                         </div>
-                        <button class="btn btn-primary bg-[#3752FD] border-none">Completed</button>
+
                     </div>
-                </div>
-                
-            </div>
 
 
 
-        </div>
 
+            </section>
+        </section>
+<div class="card w-[366px] h-[918px] bg-base-100  shadow-2xl rounded-xl mt-4 ml-10">
+    
+    <p class="dark-green text-2xl text-center mt-12 mb-5"><i class="pr-3 fa-solid fa-clock-rotate-left"></i>Activity Log</p>
+    <button class="btn  btn-xs sm:btn-sm md:btn-md lg:btn-lg xl:btn-xl text-white rounded-2xl bg-[#3752FD] font-normal mb-5 mx-24 text-base">Clear History</button>
+
+    <h1 class="border-dashed border-t-2 text-[#ecebeb]"></h1>
+
+    <p class=" text-[rgb(119,117,117)] m-5 rounded-xl p-6 bg-[#f5f6fa] ">You have Complete The Task Add Dark Mode at 12:48:15 PM</p>
+
+    <p class=" text-[rgb(114,113,113)] mx-5 rounded-xl p-6 bg-[#f5f6fa] ">You have Complete The Task Add Dark Mode at 12:48:15 PM</p>
+
+    
+</div>
     </section>
-
 
 
 
