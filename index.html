@@ -73,8 +73,10 @@
 
                 <div class="dropdown dropdown-end flex lg:gap-x-5 gap-x-1 ml-16">
                     <div class="flex gap-3 btn btn-ghost bg-slate-100 rounded-full py-6 ">
+
                         <img class="lg:w-6 w-5 lg:h-6 h-5" src="./assets/checkbox.png" alt="" />
-                        <h1 class="font-bold lg:text-3xl text-2xl">23</h1>
+
+                        <h1 id="nav-ammount" class="nav-amount font-bold lg:text-3xl text-2xl">23</h1>
                     </div>
                     <div class="dropdown dropdown-end mr-8 ">
 
@@ -97,19 +99,19 @@
             <div class="flex gap-3 justify-between p-5 mb-8 rounded-xl ">
                 <!--small card --1 -->
 
-                <div class="flex items-center gap-5 bg-base-100 w-[263px] h-[128px] shadow-sm rounded-lg  bg-[#e9eef3]">
+                <div id="task-assigned" class=" flex items-center gap-5 bg-base-100 w-[263px] h-[128px] shadow-sm rounded-lg cursor-pointer bg-[#e9eef3]">
                     <div class="rounded-full bg-white shadow-sm flex h-16 w-16 ml-4 items-center justify-center">
                         <img class="w-6 h-6 " src="./assets/checkbox.png" alt="">
                     </div>
 
-                    <div class="">
+                    <div class="task-assigned">
                         <h2 class="card-title text-[#00303C] text-sm font-normal">Task Assigned </h2>
-                        <p class="text-[#00303C] font-extrabold text-3xl">05</p>
+                        <p id="task-num" class="text-[#00303C] font-extrabold text-3xl">05</p>
                     </div>
                 </div>
                 <!--card : linear card -->
                 <div
-                    class="flex  items-center  bg-base-100 w-[550px] h-[128px] shadow-sm  bg-[#f1f2f3]  bg-gradient-to-r from-[#3752FD] to-[#9BA8F8] gap-6 rounded-xl">
+                    class="flex  items-center  bg-base-100 w-[550px] h-[128px] shadow-sm  bg-[#f1f2f3]  bg-gradient-to-r from-[#3752FD] to-[#9BA8F8] gap-6 rounded-xl cursor-pointer">
                     <div class="rounded-full flex ml-4 items-center justify-center">
                         <img class="w-20 h-20 ml-5 " src="./assets/board.png" alt="">
                     </div>
@@ -121,7 +123,7 @@
 
                 <!--small card -3 -->
 
-                <div class="flex items-center gap-3 bg-base-100 w-[263px] h-[128px] shadow-sm rounded-lg bg-[#f1f2f3]">
+                <div class="flex items-center gap-3 bg-base-100 w-[263px] h-[128px] shadow-sm rounded-lg bg-[#f1f2f3] cursor-pointer">
                     <div class="rounded-full bg-white shadow-sm flex h-16 w-16 ml-4 items-center justify-center">
                         <img class="w-6 h-6 " src="./assets/calender.png" alt="">
                     </div>
@@ -142,7 +144,7 @@
                 <div class="card-container p-8 grid grid-cols-3 gap-6 ">
 
                     <!-- Big Catd -1  -->
-                    <div class="card w-[342px] h-[317px] bg-base-100 card-xl shadow-sm p-4 bg-[#f2f3f5] ">
+                    <div class="card w-[342px] h-[317px] bg-base-100 card-xl shadow-sm p-4 bg-[#f2f3f5] cursor-pointer">
                         <button class="btn w-36 ml-5">ShopEase</button>
                         <div class="card-body  rounded-lg   ">
                             <h2 class="text-xl font-medium dark-green ">Fix Mobile Button Issue </h2>
@@ -157,12 +159,12 @@
                                     <p class="text-color text-xs">Deadline</p>
                                     <h1 class="dark-green font-normal text-sm">21 March 2025</h1>
                                 </div>
-                                <button class="btn btn-primary bg-[#3752FD] border-none">Completed</button>
+                                <button id="btn-complete" class="complete-btn btn btn-primary bg-[#3752FD] border-none">Completed</button>
                             </div>
                         </div>
                     </div>
                     <!-- Big Catd -2 -->
-                    <div class="card w-[342px] h-[317px] bg-base-100 card-xl shadow-sm p-4 bg-[#f2f3f5] ">
+                    <div class="card w-[342px] h-[317px] bg-base-100 card-xl shadow-sm p-4 bg-[#f2f3f5] cursor-pointer">
                         <button class="btn w-36 ml-5">CloudSync</button>
                         <div class="card-body  rounded-lg   ">
                             <h2 class="text-xl font-medium dark-green ">Add Dark Mode</h2>
@@ -176,12 +178,12 @@
                                     <p class="text-color text-xs">Deadline</p>
                                     <h1 class="dark-green font-normal text-sm">21 March 2025</h1>
                                 </div>
-                                <button class="btn btn-primary bg-[#3752FD] border-none">Completed</button>
+                                <button id=" btn-complete"class="complete-btn btn btn-primary bg-[#3752FD] border-none">Completed</button>
                             </div>
                         </div>
                     </div>
                     <!-- Big Catd -3 -->
-                    <div class="card w-[342px] h-[317px] bg-base-100 card-xl shadow-sm p-4 bg-[#f2f3f5] ">
+                    <div class="card w-[342px] h-[317px] bg-base-100 card-xl shadow-sm p-4 bg-[#f2f3f5] cursor-pointer">
                         <button class="btn w-36 ml-5">SwiftPay</button>
                         <div class="card-body  rounded-lg   ">
                             <h2 class="text-xl font-medium dark-green ">Optimize Home page  </h2>
@@ -196,12 +198,12 @@
                                     <p class="text-color text-xs">Deadline</p>
                                     <h1 class="dark-green font-normal text-sm">21 March 2025</h1>
                                 </div>
-                                <button class="btn btn-primary bg-[#3752FD] border-none">Completed</button>
+                                <button id=" btn-complete"class="complete-btn btn btn-primary bg-[#3752FD] border-none">Completed</button>
                             </div>
                         </div>
                     </div>
                     <!-- Big Catd -4 -->
-                    <div class="card w-[342px] h-[317px] bg-base-100 card-xl shadow-sm p-4 bg-[#f2f3f5] ">
+                    <div class="card w-[342px] h-[317px] bg-base-100 card-xl shadow-sm p-4 bg-[#f2f3f5] cursor-pointer">
                         <button class="btn w-36 ml-5">Meta</button>
                         <div class="card-body  rounded-lg   ">
                             <h2 class="text-xl font-medium dark-green ">Add new emoji 🤲 </h2>
@@ -216,12 +218,12 @@
                                     <p class="text-color text-xs">Deadline</p>
                                     <h1 class="dark-green font-normal text-sm">21 March 2025</h1>
                                 </div>
-                                <button class="btn btn-primary bg-[#3752FD] border-none">Completed</button>
+                                <button id=" btn-complete"class="complete-btn  btn btn-primary bg-[#3752FD] border-none">Completed</button>
                             </div>
                         </div>
                     </div>
                     <!-- Big Catd -5 -->
-                    <div class="card w-[342px] h-[317px] bg-base-100 card-xl shadow-sm p-4 bg-[#f2f3f5] ">
+                    <div class="card w-[342px] h-[317px] bg-base-100 card-xl shadow-sm p-4 bg-[#f2f3f5] cursor-pointer">
                         <button class="btn w-36 ml-5">Google LLC</button>
                         <div class="card-body  rounded-lg   ">
                             <h2 class="text-xl font-medium dark-green ">Integrate OpenAI API </h2>
@@ -236,12 +238,12 @@
                                     <p class="text-color text-xs">Deadline</p>
                                     <h1 class="dark-green font-normal text-sm">21 March 2025</h1>
                                 </div>
-                                <button class="btn btn-primary bg-[#3752FD] border-none">Completed</button>
+                                <button id="btn-complete"class="complete-btn btn btn-primary bg-[#3752FD] border-none">Completed</button>
                             </div>
                         </div>
                     </div>
                     <!-- Big Catd -6 -->
-                    <div class="card w-[342px] h-[317px] bg-base-100 card-xl shadow-sm p-2 bg-[#f2f3f5] ">
+                    <div class="card w-[342px] h-[317px] bg-base-100 card-xl shadow-sm p-2 bg-[#f2f3f5] cursor-pointer">
                         <button class="btn w-36 ml-5">Glassdoar</button>
                         <div class="card-body  rounded-lg   ">
                             <h2 class="text-xl font-medium dark-green ">Improve Job searching </h2>
@@ -256,7 +258,7 @@
                                     <p class="text-color text-xs">Deadline</p>
                                     <h1 class="dark-green font-normal text-sm">21 March 2025</h1>
                                 </div>
-                                <button class="btn btn-primary bg-[#3752FD] border-none">Completed</button>
+                                <button id="  btn-complete"class="complete-btn  btn btn-primary bg-[#3752FD] border-none">Completed</button>
                             </div>
                         </div>
 
@@ -267,7 +269,7 @@
 
             </section>
         </section>
-<div class="card w-[366px] h-[918px] bg-base-100  shadow-2xl rounded-xl mt-4 m-5">
+<div class="card w-[366px] h-[918px] bg-base-100  shadow-2xl rounded-xl mt-4 m-5 cursor-pointer">
     
     <p class="dark-green text-2xl text-center mt-12 mb-5"><i class="pr-3 fa-solid fa-clock-rotate-left"></i>Activity Log</p>
     <button class="btn  btn-xs sm:btn-sm md:btn-md lg:btn-lg xl:btn-xl text-white rounded-2xl bg-[#3752FD] font-normal mb-5 mx-24 text-base">Clear History</button>
@@ -283,7 +285,8 @@
     </section>
 
 
-
+<script src="./script/index.js"></script>
+<script src="./script/utilities.js"></script>
 </body>
 
 </html>
