@@ -21,6 +21,7 @@ for (let i= 0; i <completeButton.length ; i++){
   console.log(completeBtns);
    completeBtns.addEventListener('click', function(){
      alert('Board update succesfully')
+     completeBtns.disabled = true
 
      navNumber++
      navAmount.textContent = navNumber;
@@ -29,11 +30,9 @@ for (let i= 0; i <completeButton.length ; i++){
     taskNum.textContent = taskNumber;
    }
 else{
-      alert('okay')
+      alert('congratess!! You have completed all the current task.')
    }
-  
-
-
   })
 }
+
 
