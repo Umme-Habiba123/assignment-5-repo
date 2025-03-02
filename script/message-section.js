@@ -20,9 +20,16 @@ function messageText(textMessage){
  for (let i = 0; i < completeBtn.length; i++) {
     const completeButton = completeBtn[i]
      completeButton.addEventListener('click', function(event){
-
-        const textMessage = "You have Complete The Task Add Dark Mode at " 
+      let parentDiv = this.closest("#big-card");
+      
+      if (parentDiv) {
+        let titleText = parentDiv.querySelector("#title-text")?.
+        textContent || "Title not found";
+        console.log(titleText);
+        const textMessage ="You have Complete The Task " + titleText;
         messageText(textMessage)
+    }
+        
      })
     }
 
