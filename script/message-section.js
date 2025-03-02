@@ -29,3 +29,13 @@ function messageText(textMessage){
         messageText(textMessage)
      })
     }
+
+
+    // card a current time---
+  const updateTime = document.querySelector('.current-time')
+
+  if(updateTime){
+    updateTime.innerText = presentTime;
+  }
+
+

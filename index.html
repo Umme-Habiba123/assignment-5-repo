@@ -36,10 +36,6 @@
             width: 300px;
             max-width: 100%;
 
-
-
-
-
         }
 
         /* dark green color */
@@ -54,19 +50,21 @@
         .blue-color {
             color: #3752FD;
         }
-        .text{
+
+        .text {
             padding: 20px 20px;
             margin: 20px 20px;
             background-color: #F4F7FF;
-            color:#5b5a5a;
+            color: #5b5a5a;
             display: hidden;
             border-radius: 17px;
-           
+
         }
     </style>
 </head>
 
 <body class="w-[1536px] h-[100px] mx-auto poppins-font bg-[#eaecee]">
+   <section id="main-section">
     <header class="w-[#1536px] h-[100px]">
         <nav class="pt-4 ">
             <div class="navbar bg-base-100 shadow-sm rounded-2xl ">
@@ -120,7 +118,7 @@
                     </div>
                 </div>
                 <!--card : linear card -->
-                <div
+                <div id="linear-card"
                     class="flex  items-center  bg-base-100 w-[550px] h-[128px] shadow-sm  bg-[#f1f2f3]  bg-gradient-to-r from-[#3752FD] to-[#9BA8F8] gap-6 rounded-xl cursor-pointer">
                     <div class="rounded-full flex ml-4 items-center justify-center">
                         <img class="w-20 h-20 ml-5 " src="./assets/board.png" alt="">
@@ -139,9 +137,15 @@
                         <img class="w-6 h-6 " src="./assets/calender.png" alt="">
                     </div>
 
-                    <div class="">
-                        <p class="text-[#00303C] text-2xl font-normal">Wed,</p>
-                        <p class="card-title text-[#00303C] font-bold text-2xl  ">Jul 28 2025</p>
+                    <div class="current-time">
+                        <script>
+                            var today = new Date();
+                            var currentDate = today.toLocaleDateString('en-us', {
+                                weekday: 'short', month: 'short', day: '2-digit', year: 'numeric'
+                            })
+                            document.write(currentDate)
+                        </script>
+
 
                     </div>
                 </div>
@@ -281,18 +285,15 @@
                         </div>
 
                     </div>
-
-
-
-
             </section>
         </section>
-        <div class="text-container card w-[366px] h-[918px] bg-base-100  shadow-2xl rounded-xl mt-4 m-5 cursor-pointer">
+        <div id="div-container"
+            class="text-container card w-[366px] h-[918px] bg-base-100  shadow-2xl rounded-xl mt-4 m-5 cursor-pointer">
 
             <p class="dark-green text-2xl text-center mt-12 mb-5"><i
                     class="pr-3 fa-solid fa-clock-rotate-left"></i>Activity Log</p>
-            <button
-                class="btn  btn-xs sm:btn-sm md:btn-md lg:btn-lg xl:btn-xl text-white rounded-2xl bg-[#3752FD] font-normal mb-5 mx-24 text-base">Clear
+            <button id="clear-history"
+                class="clear-history btn  btn-xs sm:btn-sm md:btn-md lg:btn-lg xl:btn-xl text-white rounded-xl bg-[#3752FD] font-normal mb-5 mx-24 text-base">Clear
                 History</button>
 
             <h1 class="border-dashed border-t-2 text-[#ecebeb]"></h1>
@@ -306,19 +307,116 @@
                 Mode at 12:48:15 PM</p>
 
 
-   
+
             <div class="" id="text-container">
             </div>
-            
+
 
         </div>
     </section>
 
 
+   </section>
+
+    <!-- page 2 -->
+   <section id="next-sec">
+    <section>
+        <!-- nav-2 -->
+
+        <nav class=" mb-10 shadow-xl mt-10">
+            <div class="flex-1">
+                <div class="navbar bg-base-100  rounded-xl ">
+                    <div class="flex-1">
+                        <div class="flex p-4  ">
+                            <img class="w-10 h-10 pt-" src="./assets/logo.png" alt="" />
+                            <a class=" text-xl pl-3 pt-1"><span
+                                    class="text-[#00303C] font-normal lg:text-2xl text-2xl">Dev</span><span
+                                    class="lg:text-xl text-2xl text-[#00303C] font-extrabold">
+                                    Board</span></a>
+                        </div>
+                    </div>
+                    <div class="dropdown flex lg:gap-x-5 gap-x-1 ml-16">
+                        <div class=" gap-3 rounded-full py-6 ">
+
+                        </div>
+                        <div class="dropdown dropdown-end mr-8 ">
+                            <button id="back-button"
+                                class="back-button  btn btn-primary p-6 text-xl bg-[#1a2986] border-none">back to
+                                Desk</button>
+                        </div>
+
+                    </div>
+                </div>
+        </nav>
+    </section>
+    <h1 class="text-center font-bold text-2xl">Blogs</h1>
+    <section class="mt-5 mb-10 space-y-8">
+
+        <!-- 1st box -->
+
+        <div class="flex w-full flex-col bg-white">
+            <div class=" bg-base-300 p-7 text-xl grid h-20 font-bold ">Question-1: What are the different ways to select
+                an element in the DOM?</div>
+            <p class="border-dashed border-t-1 text-[#c0c0c0]"></p>
+            <div class="mt-0 bg-base-300 px-10 text-lg  grid h-20 place-items-center text-[#363136]">There are several
+                ways to select an element. For example, if you want to select an element by ID, you should use
+                "getElementById", and if you want to select an element by class, you can use "getElementsByClassName".
+            </div>
+        </div>
+
+        <!-- 2nd box -->
+        <div class="flex w-full flex-col bg-white">
+            <div class=" bg-base-300 p-7 text-xl grid h-20 font-bold ">Question-2: What is the difference between
+                innerHTML, innerText, and textContent ?</div>
+            <p class="border-dashed border-t-1 text-[#c0c0c0]"></p>
+            <div class="mt-0 bg-base-300 p-5 text-lg px-10 grid h-20 place-items-center text-[#363136]">What I
+                understand is that "innerHTML" can select the entire HTML inside an element and can change the full HTML
+                content. On the other hand, "innerText" only selects and retrieves the text or value inside the element.
+            </div>
+        </div>
+
+        <!-- 3rd box -->
+        <div class="flex w-full flex-col bg-white">
+            <div class=" bg-base-300 p-7 text-xl grid h-20 font-bold ">Question-3: What is event delegation in the DOM?
+            </div>
+            <p class="border-dashed border-t-1 text-[#c0c0c0]"></p>
+            <div class="mt-0 bg-base-300 p-5 text-lg px-10 grid h-20 place-items-center text-[#363136]">In the DOM,
+                event delegation is a technique where you use a single parent element to handle events for all of its
+                child elements, and you only need to use one event listener instead of adding separate event listeners
+                for each child element.
+            </div>
+        </div>
+        <!--4th box -->
+        <div class="flex w-full flex-col bg-white">
+            <div class=" bg-base-300 p-7 text-xl grid h-20 font-bold ">Question-4: What is event bubbling in the DOM?
+            </div>
+            <p class="border-dashed border-t-1 text-[#c0c0c0]"></p>
+            <div class="mt-0 bg-base-300 p-5 text-lg px-10 grid h-20 place-items-center text-[#363136]">In the DOM,
+                event bubbling is when we add an event, it first triggers on the target element, and then slowly moves
+                up towards the parent elements, eventually reaching the document.
+            </div>
+        </div>
+        <!-- 5th box -->
+        <div class="flex w-full flex-col bg-white">
+            <div class=" bg-base-300 p-7 text-xl grid h-20 font-bold ">Question-5: How do you create, add, and remove
+                elements using JavaScript?</div>
+            <p class="border-dashed border-t-1 text-[#c0c0c0]"></p>
+            <div class=" bg-base-300 p-6 text-lg grid h-20 place-items-center text-[#363136]">I create an element using
+                createElement, add it using appendChild, and delete it using removeChild.There are other systems as
+                well, but I use these.This feels easier to me.
+            </div>
+        </div>
+
+    </section>
+
+   </section>
+
     <script src="./script/index.js"></script>
     <script src="./script/utilities.js"></script>
     <script src="./script/message-section.js"></script>
     <script src="./script/disappear-text.js"></script>
+    <script src="./script/get-date.js"></script>
+    <script src="./script/toggole-second-sec.js"></script>
 </body>
 
 </html>
