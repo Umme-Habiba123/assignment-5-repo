@@ -62,11 +62,11 @@
         }
     </style>
 </head>
-
-<body class="w-[1536px] h-[100px] mx-auto poppins-font bg-[#eaecee]">
+<!-- //bg-[#eaecee] -->
+<body class="mx-auto poppins-font">   
    <section id="main-section">
-    <header class="w-[#1536px] h-[100px]">
-        <nav class="pt-4 ">
+    <header class="">
+        <nav class="max-w-screen-xl m-auto">
             <div class="navbar bg-base-100 shadow-sm rounded-2xl ">
                 <div class="flex-1">
                     <div class="flex p-4">
@@ -88,8 +88,10 @@
                     <div class="dropdown dropdown-end mr-8 ">
 
                         <div class="lg:w-10 rounded-full lg:mb-5 mb-3 btn btn-ghost btn-circle avatar mt-1">
-                            <img alt="theme button " src="./assets/theme-btn.png" />
+
+                            <img id="theme-changing" alt="theme button " src="./assets/theme-btn.png" />
                         </div>
+                        
 
                     </div>
 
@@ -101,13 +103,13 @@
     </header>
 
     <!--task assigned, discover something -->
-    <section class="big-section flex mt-3  pt-4 bg-[#e9ebed] ">
-        <section class="w-[1186px] h-[918px] mt-10 bg-base-100  shadow-xl ">
+    <section class="big-section flex gap-3 pt-4 max-w-screen-xl m-auto">
+        <section class="bg-base-100  shadow-xl rounded-lg ">
             <div class="flex gap-3 justify-between p-5 mb-8 rounded-xl ">
                 <!--small card --1 -->
 
                 <div id="task-assigned"
-                    class=" flex items-center gap-5 bg-base-100 w-[263px] h-[128px] shadow-sm rounded-lg cursor-pointer bg-[#e9eef3]">
+                    class=" flex items-center gap-5 bg-base-100 w-[200px] h-[128px] shadow-sm rounded-lg cursor-pointer bg-[#e9eef3]">
                     <div class="rounded-full bg-white shadow-sm flex h-16 w-16 ml-4 items-center justify-center">
                         <img class="w-6 h-6 " src="./assets/checkbox.png" alt="">
                     </div>
@@ -119,7 +121,7 @@
                 </div>
                 <!--card : linear card -->
                 <div id="linear-card"
-                    class="flex  items-center  bg-base-100 w-[550px] h-[128px] shadow-sm  bg-[#f1f2f3]  bg-gradient-to-r from-[#3752FD] to-[#9BA8F8] gap-6 rounded-xl cursor-pointer">
+                    class="flex  items-center  bg-base-100 w-[450px] h-[128px] shadow-sm  bg-[#f1f2f3]  bg-gradient-to-r from-[#3752FD] to-[#9BA8F8] gap-6 rounded-xl cursor-pointer">
                     <div class="rounded-full flex ml-4 items-center justify-center">
                         <img class="w-20 h-20 ml-5 " src="./assets/board.png" alt="">
                     </div>
@@ -132,7 +134,7 @@
                 <!--small card -3 -->
 
                 <div
-                    class="flex items-center gap-3 bg-base-100 w-[263px] h-[128px] shadow-sm rounded-lg bg-[#f1f2f3] cursor-pointer">
+                    class="flex items-center gap-3 bg-base-100 w-[200px] h-[128px] shadow-sm rounded-lg bg-[#f1f2f3] cursor-pointer">
                     <div class="rounded-full bg-white shadow-sm flex h-16 w-16 ml-4 items-center justify-center">
                         <img class="w-6 h-6 " src="./assets/calender.png" alt="">
                     </div>
@@ -156,31 +158,32 @@
 
             <!-- big cardss -->
             <section class="">
-                <div class="card-container p-8 grid grid-cols-3 gap-6 ">
+                <div class="card-container p-5 grid grid-cols-3 gap-6 ">
 
                     <!-- Big Catd -1  -->
-                    <div class="card w-[342px] h-[317px] bg-base-100 card-xl shadow-sm p-4 bg-[#f2f3f5] cursor-pointer">
+                    <div class="card w-[280px] h-[317px] bg-base-100 card-xl shadow-sm p-4 bg-[#f2f3f5] cursor-pointer">
                         <button class="btn w-36 ml-5">ShopEase</button>
-                        <div class="card-body  rounded-lg   ">
-                            <h2 class="text-xl font-medium dark-green ">Fix Mobile Button Issue </h2>
-                            <p class="ellipsis line-clamp-2 rounded-xl text-xs font-normal text-[#7a7a7a] p-4 mb-5">
-                                Debug using
-                                Chrome <br> DevTools, check for overlapping elements, and ensure onClick works properly
-                                and ensure onClick works properly</p>
+                        <div class="card-body rounded-lg ">
+                            <h2 class="text-xl font-medium dark-green">Fix Mobile Button Issue </h2>
+                            <p class="ellipsis line-clamp-2 rounded-xl text-xs font-normal text-[#7a7a7a] p-2 ">
+                                Store the user's preference in localStorage, update CSS vari ables dynamically, and
+                                apply a smooth transition effect.</p>
 
                             <h1 class=" border-t-2 border-dashed border-gray-200"></h1>
-                            <div class=" justify-end card-actions flex gap-5 mt-3">
+                            <div class="flex">
                                 <div>
                                     <p class="text-color text-xs">Deadline</p>
-                                    <h1 class="dark-green font-normal text-sm">21 March 2025</h1>
+                                    <h1 class="dark-green font-normal text-xs">21 March 2025</h1>
                                 </div>
-                                <button id="btn-complete"
-                                    class="complete-btn btn btn-primary bg-[#3752FD] border-none">Completed</button>
+                                <div>
+                                    <button id="btn-complete"
+                                    class="complete-btn btn btn-primary bg-[#3752FD] border-none text-xs">Completed</button>
+                                </div>
                             </div>
                         </div>
                     </div>
                     <!-- Big Catd -2 -->
-                    <div class="card w-[342px] h-[317px] bg-base-100 card-xl shadow-sm p-4 bg-[#f2f3f5] cursor-pointer">
+                    <div class="card w-[280px] h-[317px] bg-base-100 card-xl shadow-sm p-4 bg-[#f2f3f5] cursor-pointer">
                         <button class="btn w-36 ml-5">CloudSync</button>
                         <div class="card-body  rounded-lg   ">
                             <h2 class="text-xl font-medium dark-green ">Add Dark Mode</h2>
@@ -200,7 +203,7 @@
                         </div>
                     </div>
                     <!-- Big Catd -3 -->
-                    <div class="card w-[342px] h-[317px] bg-base-100 card-xl shadow-sm p-4 bg-[#f2f3f5] cursor-pointer">
+                    <div class="card w-[280px] h-[317px] bg-base-100 card-xl shadow-sm p-4 bg-[#f2f3f5] cursor-pointer">
                         <button class="btn w-36 ml-5">SwiftPay</button>
                         <div class="card-body  rounded-lg   ">
                             <h2 class="text-xl font-medium dark-green ">Optimize Home page  </h2>
@@ -221,8 +224,8 @@
                             </div>
                         </div>
                     </div>
-                    <!-- Big Catd -4 -->
-                    <div class="card w-[342px] h-[317px] bg-base-100 card-xl shadow-sm p-4 bg-[#f2f3f5] cursor-pointer">
+                    <!-- Big Card -4 -->
+                    <div class="card w-[280px] h-[317px] bg-base-100 card-xl shadow-sm p-4 bg-[#f2f3f5] cursor-pointer">
                         <button class="btn w-36 ml-5">Meta</button>
                         <div class="card-body  rounded-lg   ">
                             <h2 class="text-xl font-medium dark-green ">Add new emoji 🤲 </h2>
@@ -243,7 +246,7 @@
                         </div>
                     </div>
                     <!-- Big Catd -5 -->
-                    <div class="card w-[342px] h-[317px] bg-base-100 card-xl shadow-sm p-4 bg-[#f2f3f5] cursor-pointer">
+                    <div class="card w-[280px] h-[317px] bg-base-100 card-xl shadow-sm p-4 bg-[#f2f3f5] cursor-pointer">
                         <button class="btn w-36 ml-5">Google LLC</button>
                         <div class="card-body  rounded-lg   ">
                             <h2 class="text-xl font-medium dark-green ">Integrate OpenAI API </h2>
@@ -264,7 +267,7 @@
                         </div>
                     </div>
                     <!-- Big Catd -6 -->
-                    <div class="card w-[342px] h-[317px] bg-base-100 card-xl shadow-sm p-2 bg-[#f2f3f5] cursor-pointer">
+                    <div class="card w-[280px] h-[317px] bg-base-100 card-xl shadow-sm p-2 bg-[#f2f3f5] cursor-pointer">
                         <button class="btn w-36 ml-5">Glassdoar</button>
                         <div class="card-body  rounded-lg   ">
                             <h2 class="text-xl font-medium dark-green ">Improve Job searching </h2>
@@ -288,7 +291,7 @@
             </section>
         </section>
         <div id="div-container"
-            class="text-container card w-[366px] h-[918px] bg-base-100  shadow-2xl rounded-xl mt-4 m-5 cursor-pointer">
+            class="text-container bg-base-100 shadow-2xl rounded-xl  cursor-pointer">
 
             <p class="dark-green text-2xl text-center mt-12 mb-5"><i
                     class="pr-3 fa-solid fa-clock-rotate-left"></i>Activity Log</p>
@@ -417,6 +420,7 @@
     <script src="./script/disappear-text.js"></script>
     <script src="./script/get-date.js"></script>
     <script src="./script/toggole-second-sec.js"></script>
+    <script src="./script/theme.js"></script>
 </body>
 
 </html>
