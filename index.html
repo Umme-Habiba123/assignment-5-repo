@@ -63,356 +63,382 @@
     </style>
 </head>
 <!-- //bg-[#eaecee] -->
-<body class="mx-auto poppins-font">   
-   <section id="main-section">
-    <header class="">
-        <nav class="max-w-screen-xl m-auto">
-            <div class="navbar bg-base-100 shadow-sm rounded-2xl ">
-                <div class="flex-1">
-                    <div class="flex p-4">
-                        <img class="" src="./assets/logo.png" alt="" />
-                        <a class="btn btn-ghost text-xl pl-3 pt-3"><span
-                                class="text-[#00303C] font-normal lg:text-4xl text-2xl">Dev</span><span
-                                class="lg:text-4xl text-2xl text-[#00303C] font-extrabold">
-                                Board</span></a>
-                    </div>
-                </div>
 
-                <div class="dropdown dropdown-end flex lg:gap-x-5 gap-x-1 ml-16">
-                    <div class="flex gap-3 btn btn-ghost bg-slate-100 rounded-full py-6 ">
-
-                        <img class="lg:w-6 w-5 lg:h-6 h-5" src="./assets/checkbox.png" alt="" />
-
-                        <h1 id="nav-ammount" class="nav-amount font-bold lg:text-3xl text-2xl">23</h1>
-                    </div>
-                    <div class="dropdown dropdown-end mr-8 ">
-
-                        <div class="lg:w-10 rounded-full lg:mb-5 mb-3 btn btn-ghost btn-circle avatar mt-1">
-
-                            <img id="theme-changing" alt="theme button " src="./assets/theme-btn.png" />
-                        </div>
-                        
-
-                    </div>
-
-                </div>
-
-
-            </div>
-        </nav>
-    </header>
-
-    <!--task assigned, discover something -->
-    <section class="big-section flex gap-3 pt-4 max-w-screen-xl m-auto">
-        <section class="bg-base-100  shadow-xl rounded-lg ">
-            <div class="flex gap-3 justify-between p-5 mb-8 rounded-xl ">
-                <!--small card --1 -->
-
-                <div id="task-assigned"
-                    class=" flex items-center gap-5 bg-base-100 w-[200px] h-[128px] shadow-sm rounded-lg cursor-pointer bg-[#e9eef3]">
-                    <div class="rounded-full bg-white shadow-sm flex h-16 w-16 ml-4 items-center justify-center">
-                        <img class="w-6 h-6 " src="./assets/checkbox.png" alt="">
-                    </div>
-
-                    <div class="task-assigned">
-                        <h2 class="card-title text-[#00303C] text-sm font-normal">Task Assigned </h2>
-                        <p id="task-num" class="text-[#00303C] font-extrabold text-3xl">05</p>
-                    </div>
-                </div>
-                <!--card : linear card -->
-                <div id="linear-card"
-                    class="flex  items-center  bg-base-100 w-[450px] h-[128px] shadow-sm  bg-[#f1f2f3]  bg-gradient-to-r from-[#3752FD] to-[#9BA8F8] gap-6 rounded-xl cursor-pointer">
-                    <div class="rounded-full flex ml-4 items-center justify-center">
-                        <img class="w-20 h-20 ml-5 " src="./assets/board.png" alt="">
-                    </div>
-
-                    <div class="">
-                        <h2 class="card-title text-xl font-medium text-white">Discover Something <br> New Today! </h2>
-                    </div>
-                </div>
-
-                <!--small card -3 -->
-
-                <div
-                    class="flex items-center gap-3 bg-base-100 w-[200px] h-[128px] shadow-sm rounded-lg bg-[#f1f2f3] cursor-pointer">
-                    <div class="rounded-full bg-white shadow-sm flex h-16 w-16 ml-4 items-center justify-center">
-                        <img class="w-6 h-6 " src="./assets/calender.png" alt="">
-                    </div>
-
-                    <div class="current-time">
-                        <script>
-                            var today = new Date();
-                            var currentDate = today.toLocaleDateString('en-us', {
-                                weekday: 'short', month: 'short', day: '2-digit', year: 'numeric'
-                            })
-                            document.write(currentDate)
-                        </script>
-
-
-                    </div>
-                </div>
-            </div>
-            <h1 class=" border-t-2 border-dashed border-gray-200"></h1>
-
-
-
-            <!-- big cardss -->
-            <section class="">
-                <div class="card-container p-5 grid grid-cols-3 gap-6 ">
-
-                    <!-- Big Catd -1  -->
-                    <div class="card w-[280px] h-[317px] bg-base-100 card-xl shadow-sm p-4 bg-[#f2f3f5] cursor-pointer">
-                        <button class="btn w-36 ml-5">ShopEase</button>
-                        <div class="card-body rounded-lg ">
-                            <h2 class="text-xl font-medium dark-green">Fix Mobile Button Issue </h2>
-                            <p class="ellipsis line-clamp-2 rounded-xl text-xs font-normal text-[#7a7a7a] p-2 ">
-                                Store the user's preference in localStorage, update CSS vari ables dynamically, and
-                                apply a smooth transition effect.</p>
-
-                            <h1 class=" border-t-2 border-dashed border-gray-200"></h1>
-                            <div class="flex">
-                                <div>
-                                    <p class="text-color text-xs">Deadline</p>
-                                    <h1 class="dark-green font-normal text-xs">21 March 2025</h1>
-                                </div>
-                                <div>
-                                    <button id="btn-complete"
-                                    class="complete-btn btn btn-primary bg-[#3752FD] border-none text-xs">Completed</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Big Catd -2 -->
-                    <div class="card w-[280px] h-[317px] bg-base-100 card-xl shadow-sm p-4 bg-[#f2f3f5] cursor-pointer">
-                        <button class="btn w-36 ml-5">CloudSync</button>
-                        <div class="card-body  rounded-lg   ">
-                            <h2 class="text-xl font-medium dark-green ">Add Dark Mode</h2>
-                            <p class="ellipsis line-clamp-2 rounded-xl text-xs font-normal text-[#7a7a7a] p-4 mb-5">
-                                Store the user's preference in localStorage, update CSS vari <br> ables dynamically, and
-                                apply a smooth transition effect.
-
-                            <h1 class=" border-t-2 border-dashed border-gray-200"></h1>
-                            <div class=" justify-end card-actions flex gap-5 mt-3">
-                                <div>
-                                    <p class="text-color text-xs">Deadline</p>
-                                    <h1 class="dark-green font-normal text-sm">21 March 2025</h1>
-                                </div>
-                                <button id=" btn-complete"
-                                    class="complete-btn btn btn-primary bg-[#3752FD] border-none">Completed</button>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Big Catd -3 -->
-                    <div class="card w-[280px] h-[317px] bg-base-100 card-xl shadow-sm p-4 bg-[#f2f3f5] cursor-pointer">
-                        <button class="btn w-36 ml-5">SwiftPay</button>
-                        <div class="card-body  rounded-lg   ">
-                            <h2 class="text-xl font-medium dark-green ">Optimize Home page  </h2>
-                            <p class="ellipsis line-clamp-2 rounded-xl text-xs font-normal text-[#7a7a7a] p-4 mb-5">
-                                Debug using Chrome DevTools, check for overlappi <br> ng elements, and ensure onClick
-                                works properly
-                                and ensure onClick works properly</p>
-
-                            <h1 class=" border-t-2 border-dashed border-gray-200"></h1>
-                            <div class=" justify-end card-actions flex gap-5 mt-3">
-                                <div>
-                                    <p class="text-color text-xs">Deadline</p>
-                                    <h1 class="dark-green font-normal text-sm">21 March 2025</h1>
-                                </div>
-
-                                <button id=" btn-complete"
-                                    class="complete-btn btn btn-primary bg-[#3752FD] border-none">Completed</button>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Big Card -4 -->
-                    <div class="card w-[280px] h-[317px] bg-base-100 card-xl shadow-sm p-4 bg-[#f2f3f5] cursor-pointer">
-                        <button class="btn w-36 ml-5">Meta</button>
-                        <div class="card-body  rounded-lg   ">
-                            <h2 class="text-xl font-medium dark-green ">Add new emoji 🤲 </h2>
-                            <p class="ellipsis line-clamp-2 rounded-xl text-xs font-normal text-[#7a7a7a] p-4 mb-5">
-                                Debug using Chrome DevTools, check for overlappi <br> ng elements, and ensure onClick
-                                works properly
-                                and ensure onClick works properly</p>
-
-                            <h1 class=" border-t-2 border-dashed border-gray-200"></h1>
-                            <div class=" justify-end card-actions flex gap-5 mt-3">
-                                <div>
-                                    <p class="text-color text-xs">Deadline</p>
-                                    <h1 class="dark-green font-normal text-sm">21 March 2025</h1>
-                                </div>
-                                <button id=" btn-complete"
-                                    class="complete-btn  btn btn-primary bg-[#3752FD] border-none">Completed</button>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Big Catd -5 -->
-                    <div class="card w-[280px] h-[317px] bg-base-100 card-xl shadow-sm p-4 bg-[#f2f3f5] cursor-pointer">
-                        <button class="btn w-36 ml-5">Google LLC</button>
-                        <div class="card-body  rounded-lg   ">
-                            <h2 class="text-xl font-medium dark-green ">Integrate OpenAI API </h2>
-                            <p class="ellipsis line-clamp-2 rounded-xl text-xs font-normal text-[#7a7a7a] p-4 mb-5">
-                                Debug using Chrome DevTools, check for overlappi <br> ng elements, and ensure onClick
-                                works properly
-                                and ensure onClick works properly</p>
-
-                            <h1 class=" border-t-2 border-dashed border-gray-200"></h1>
-                            <div class=" justify-end card-actions flex gap-5 mt-3">
-                                <div>
-                                    <p class="text-color text-xs">Deadline</p>
-                                    <h1 class="dark-green font-normal text-sm">21 March 2025</h1>
-                                </div>
-                                <button id="btn-complete"
-                                    class="complete-btn btn btn-primary bg-[#3752FD] border-none">Completed</button>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Big Catd -6 -->
-                    <div class="card w-[280px] h-[317px] bg-base-100 card-xl shadow-sm p-2 bg-[#f2f3f5] cursor-pointer">
-                        <button class="btn w-36 ml-5">Glassdoar</button>
-                        <div class="card-body  rounded-lg   ">
-                            <h2 class="text-xl font-medium dark-green ">Improve Job searching </h2>
-                            <p class="ellipsis line-clamp-2 rounded-xl text-xs font-normal text-[#7a7a7a] p-4 mb-5">
-                                Debug using Chrome DevTools, check for overlappi <br> ng elements, and ensure onClick
-                                works properly
-                                and ensure onClick works properly</p>
-
-                            <h1 class=" border-t-2 border-dashed border-gray-200"></h1>
-                            <div class=" justify-end card-actions flex gap-5 mt-3">
-                                <div>
-                                    <p class="text-color text-xs">Deadline</p>
-                                    <h1 class="dark-green font-normal text-sm">21 March 2025</h1>
-                                </div>
-                                <button id="  btn-complete"
-                                    class="complete-btn  btn btn-primary bg-[#3752FD] border-none">Completed</button>
-                            </div>
-                        </div>
-
-                    </div>
-            </section>
-        </section>
-        <div id="div-container"
-            class="text-container bg-base-100 shadow-2xl rounded-xl  cursor-pointer">
-
-            <p class="dark-green text-2xl text-center mt-12 mb-5"><i
-                    class="pr-3 fa-solid fa-clock-rotate-left"></i>Activity Log</p>
-            <button id="clear-history"
-                class="clear-history btn  btn-xs sm:btn-sm md:btn-md lg:btn-lg xl:btn-xl text-white rounded-xl bg-[#3752FD] font-normal mb-5 mx-24 text-base">Clear
-                History</button>
-
-            <h1 class="border-dashed border-t-2 text-[#ecebeb]"></h1>
-
-            <p id="text-message" class="text-message text-[rgb(119,117,117)] m-5 rounded-xl p-6 bg-[#f5f6fa] hidden">You
-                have Complete The Task Add Dark
-                Mode at 12:48:15 PM</p>
-
-            <p class=" text-[rgb(114,113,113)] mx-5 rounded-xl p-6 bg-[#f5f6fa] hidden">You have Complete The Task Add
-                Dark
-                Mode at 12:48:15 PM</p>
-
-
-
-            <div class="" id="text-container">
-            </div>
-
-
-        </div>
-    </section>
-
-
-   </section>
-
-    <!-- page 2 -->
-   <section id="next-sec">
-    <section>
-        <!-- nav-2 -->
-
-        <nav class=" mb-10 shadow-xl mt-10">
-            <div class="flex-1">
-                <div class="navbar bg-base-100  rounded-xl ">
+<body class="mx-auto poppins-font">
+    <section id="main-section">
+        <header class="">
+            <nav class="max-w-screen-xl  m-auto">
+                <div class="navbar bg-base-100 shadow-sm rounded-2xl ">
                     <div class="flex-1">
-                        <div class="flex p-4  ">
-                            <img class="w-10 h-10 pt-" src="./assets/logo.png" alt="" />
-                            <a class=" text-xl pl-3 pt-1"><span
-                                    class="text-[#00303C] font-normal lg:text-2xl text-2xl">Dev</span><span
-                                    class="lg:text-xl text-2xl text-[#00303C] font-extrabold">
+                        <div class="flex p-4">
+                            <img class="" src="./assets/logo.png" alt="" />
+                            <a class="btn btn-ghost text-xl pl-3 pt-3"><span
+                                    class="text-[#00303C] font-normal lg:text-4xl text-2xl">Dev</span><span
+                                    class="lg:text-4xl text-2xl text-[#00303C] font-extrabold">
                                     Board</span></a>
                         </div>
                     </div>
-                    <div class="dropdown flex lg:gap-x-5 gap-x-1 ml-16">
-                        <div class=" gap-3 rounded-full py-6 ">
 
+                    <div class="dropdown dropdown-end flex lg:gap-x-5 gap-x-1 ml-16">
+                        <div class="flex gap-3 btn btn-ghost bg-slate-100 rounded-full py-6 ">
+
+                            <img class="lg:w-6 w-5 lg:h-6 h-5" src="./assets/checkbox.png" alt="" />
+
+                            <h1 id="nav-ammount" class="nav-amount font-bold lg:text-3xl text-2xl">23</h1>
                         </div>
                         <div class="dropdown dropdown-end mr-8 ">
-                            <button id="back-button"
-                                class="back-button  btn btn-primary p-6 text-xl bg-[#1a2986] border-none">back to
-                                Desk</button>
+
+                            <div class="lg:w-10 rounded-full lg:mb-5 mb-3 btn btn-ghost btn-circle avatar mt-1">
+
+                                <img id="theme-changing" alt="theme button " src="./assets/theme-btn.png" />
+                            </div>
+
+
                         </div>
 
                     </div>
+
+
                 </div>
-        </nav>
+            </nav>
+        </header>
+
+        <!--task assigned, discover something -->
+        <section class="big-section flex gap-3 pt-4 max-w-screen-xl m-auto">
+            <section class="bg-base-100  shadow-xl rounded-lg ">
+                <div class="flex gap-3 justify-between p-5 mb-8 rounded-xl ">
+                    <!--small card --1 -->
+
+                    <div id="task-assigned"
+                        class=" flex items-center gap-5 bg-base-100 w-[200px] h-[128px] shadow-sm rounded-lg cursor-pointer bg-[#e9eef3]">
+                        <div class="rounded-full bg-white shadow-sm flex h-16 w-16 ml-4 items-center justify-center">
+                            <img class="w-6 h-6 " src="./assets/checkbox.png" alt="">
+                        </div>
+
+                        <div class="task-assigned">
+                            <h2 class="card-title text-[#00303C] text-sm font-normal">Task Assigned </h2>
+                            <p id="task-num" class="text-[#00303C] font-extrabold text-3xl">05</p>
+                        </div>
+                    </div>
+                    <!--card : linear card -->
+                    <div id="linear-card"
+                        class="flex  items-center  bg-base-100 w-[450px] h-[128px] shadow-sm  bg-[#f1f2f3]  bg-gradient-to-r from-[#3752FD] to-[#9BA8F8] gap-6 rounded-xl cursor-pointer">
+                        <div class="rounded-full flex ml-4 items-center justify-center">
+                            <img class="w-20 h-20 ml-5 " src="./assets/board.png" alt="">
+                        </div>
+
+                        <div class="">
+                            <h2 class="card-title text-xl font-medium text-white">Discover Something <br> New Today! 
+                            </h2>
+                        </div>
+                    </div>
+
+                    <!--small card -3 -->
+
+                    <div
+                        class="flex items-center gap-3 bg-base-100 w-[200px] h-[128px] shadow-sm rounded-lg bg-[#f1f2f3] cursor-pointer">
+                        <div class="rounded-full bg-white shadow-sm flex h-16 w-16 ml-4 items-center justify-center">
+                            <img class="w-6 h-6 " src="./assets/calender.png" alt="">
+                        </div>
+
+                        <div class="current-time">
+                            <script>
+                                var today = new Date();
+                                var currentDate = today.toLocaleDateString('en-us', {
+                                    weekday: 'short', month: 'short', day: '2-digit', year: 'numeric'
+                                })
+                                document.write(currentDate)
+                            </script>
+
+
+                        </div>
+                    </div>
+                </div>
+                <h1 class=" border-t-2 border-dashed border-gray-200"></h1>
+
+
+
+                <!-- big cardss -->
+                <section class="">
+                    <div class="card-container p-5 grid grid-cols-3 gap-6 ">
+
+                        <!-- Big Catd -1  -->
+                        <div
+                            class="card w-[280px] h-[317px] bg-base-100 card-xl shadow-sm p-4 bg-[#f2f3f5] cursor-pointer">
+                            <button class="btn w-36 ml-5">ShopEase</button>
+                            <div class="card-body rounded-lg ">
+                                <h2 class="text-xl font-medium dark-green">Fix Mobile Button Issue </h2>
+                                <p class="ellipsis line-clamp-2 rounded-xl text-xs font-normal text-[#7a7a7a] p-2 ">
+                                    Store the user's preference in localStorage, update CSS vari ables dynamically, and
+                                    apply a smooth transition effect.</p>
+
+                                <h1 class=" border-t-2 border-dashed border-gray-200"></h1>
+                                <div class="flex justify-between">
+                                    <div>
+                                        <p class="text-color text-xs">Deadline</p>
+                                        <h1 class="dark-green font-normal text-xs">21 March 2025</h1>
+                                    </div>
+                                    <div>
+                                        <button id="btn-complete "
+                                            class="complete-btn btn btn-primary  bg-[#3752FD] border-none text-xs">Completed</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Big Catd -2  -->
+                        <div
+                            class="card w-[280px] h-[317px] bg-base-100 card-xl shadow-sm p-4 bg-[#f2f3f5] cursor-pointer">
+                            <button class="btn w-36 ml-5">ShopEase</button>
+                            <div class="card-body rounded-lg ">
+                                <h2 class="text-xl font-medium dark-green">Fix Mobile Button Issue </h2>
+                                <p class="ellipsis line-clamp-2 rounded-xl text-xs font-normal text-[#7a7a7a] p-2 ">
+                                    Store the user's preference in localStorage, update CSS vari ables dynamically, and
+                                    apply a smooth transition effect.</p>
+
+                                <h1 class=" border-t-2 border-dashed border-gray-200"></h1>
+                                <div class="flex justify-between">
+                                    <div>
+                                        <p class="text-color text-xs">Deadline</p>
+                                        <h1 class="dark-green font-normal text-xs">21 March 2025</h1>
+                                    </div>
+                                    <div>
+                                        <button id="btn-complete "
+                                            class="complete-btn btn btn-primary  bg-[#3752FD] border-none text-xs">Completed</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Big Catd -3 -->
+                        <div
+                            class="card w-[280px] h-[317px] bg-base-100 card-xl shadow-sm p-4 bg-[#f2f3f5] cursor-pointer">
+                            <button class="btn w-36 ml-5">ShopEase</button>
+                            <div class="card-body rounded-lg ">
+                                <h2 class="text-xl font-medium dark-green">Fix Mobile Button Issue </h2>
+                                <p class="ellipsis line-clamp-2 rounded-xl text-xs font-normal text-[#7a7a7a] p-2 ">
+                                    Store the user's preference in localStorage, update CSS vari ables dynamically, and
+                                    apply a smooth transition effect.</p>
+
+                                <h1 class=" border-t-2 border-dashed border-gray-200"></h1>
+                                <div class="flex justify-between">
+                                    <div>
+                                        <p class="text-color text-xs">Deadline</p>
+                                        <h1 class="dark-green font-normal text-xs">21 March 2025</h1>
+                                    </div>
+                                    <div>
+                                        <button id="btn-complete "
+                                            class="complete-btn btn btn-primary  bg-[#3752FD] border-none text-xs">Completed</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Big Catd -4  -->
+                        <div
+                            class="card w-[280px] h-[317px] bg-base-100 card-xl shadow-sm p-4 bg-[#f2f3f5] cursor-pointer">
+                            <button class="btn w-36 ml-5">ShopEase</button>
+                            <div class="card-body rounded-lg ">
+                                <h2 class="text-xl font-medium dark-green">Fix Mobile Button Issue </h2>
+                                <p class="ellipsis line-clamp-2 rounded-xl text-xs font-normal text-[#7a7a7a] p-2 ">
+                                    Store the user's preference in localStorage, update CSS vari ables dynamically, and
+                                    apply a smooth transition effect.</p>
+
+                                <h1 class=" border-t-2 border-dashed border-gray-200"></h1>
+                                <div class="flex justify-between">
+                                    <div>
+                                        <p class="text-color text-xs">Deadline</p>
+                                        <h1 class="dark-green font-normal text-xs">21 March 2025</h1>
+                                    </div>
+                                    <div>
+                                        <button id="btn-complete "
+                                            class="complete-btn btn btn-primary  bg-[#3752FD] border-none text-xs">Completed</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Big Catd -5  -->
+                        <div
+                            class="card w-[280px] h-[317px] bg-base-100 card-xl shadow-sm p-4 bg-[#f2f3f5] cursor-pointer">
+                            <button class="btn w-36 ml-5">ShopEase</button>
+                            <div class="card-body rounded-lg ">
+                                <h2 class="text-xl font-medium dark-green">Fix Mobile Button Issue </h2>
+                                <p class="ellipsis line-clamp-2 rounded-xl text-xs font-normal text-[#7a7a7a] p-2 ">
+                                    Store the user's preference in localStorage, update CSS vari ables dynamically, and
+                                    apply a smooth transition effect.</p>
+
+                                <h1 class=" border-t-2 border-dashed border-gray-200"></h1>
+                                <div class="flex justify-between">
+                                    <div>
+                                        <p class="text-color text-xs">Deadline</p>
+                                        <h1 class="dark-green font-normal text-xs">21 March 2025</h1>
+                                    </div>
+                                    <div>
+                                        <button id="btn-complete "
+                                            class="complete-btn btn btn-primary  bg-[#3752FD] border-none text-xs">Completed</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Big Catd -6  -->
+                        <div
+                            class="card w-[280px] h-[317px] bg-base-100 card-xl shadow-sm p-4 bg-[#f2f3f5] cursor-pointer">
+                            <button class="btn w-36 ml-5">ShopEase</button>
+                            <div class="card-body rounded-lg ">
+                                <h2 id="title-text" class="text-xl font-medium dark-green">Fix Mobile Button Issue </h2>
+                                <p class="ellipsis line-clamp-2 rounded-xl text-xs font-normal text-[#7a7a7a] p-2 ">
+                                    Store the user's preference in localStorage, update CSS vari ables dynamically, and
+                                    apply a smooth transition effect.</p>
+
+                                <h1 class=" border-t-2 border-dashed border-gray-200"></h1>
+                                <div class="flex justify-between">
+                                    <div>
+                                        <p class="text-color text-xs">Deadline</p>
+                                        <h1 class="dark-green font-normal text-xs">21 March 2025</h1>
+                                    </div>
+                                    <div>
+                                        <button id="btn-complete "
+                                            class="complete-btn btn btn-primary  bg-[#3752FD] border-none text-xs">Completed</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                </section>
+            </section>
+            <div id="div-container" class="text-container bg-base-100 shadow-2xl rounded-xl  cursor-pointer">
+
+                <p class="dark-green text-2xl text-center mt-12 mb-5"><i
+                        class="pr-3 fa-solid fa-clock-rotate-left"></i>Activity Log</p>
+                <button id="clear-history"
+                    class="clear-history btn  btn-xs sm:btn-sm md:btn-md lg:btn-lg xl:btn-xl text-white rounded-xl bg-[#3752FD] font-normal mb-5 mx-24 text-base">Clear
+                    History</button>
+
+                <h1 class="border-dashed border-t-2 text-[#ecebeb]"></h1>
+
+                <p id="text-message"
+                    class="text-message text-[rgb(119,117,117)] m-5 rounded-xl p-6 bg-[#f5f6fa] hidden">You
+                    have Complete The Task Add Dark
+                    Mode at 12:48:15 PM</p>
+
+                <p class=" text-[rgb(114,113,113)] mx-5 rounded-xl p-6 bg-[#f5f6fa] hidden">You have Complete The Task
+                    Add
+                    Dark
+                    Mode at 12:48:15 PM</p>
+
+
+
+                <div class="" id="text-container">
+                </div>
+
+
+            </div>
+        </section>
+
+
     </section>
-    <h1 class="text-center font-bold text-2xl">Blogs</h1>
-    <section class="mt-5 mb-10 space-y-8">
 
-        <!-- 1st box -->
+    <!-- page 2 -->
+    <section id="next-sec">
+        <section>
+            <!-- nav-2 -->
 
-        <div class="flex w-full flex-col bg-white">
-            <div class=" bg-base-300 p-7 text-xl grid h-20 font-bold ">Question-1: What are the different ways to select
-                an element in the DOM?</div>
-            <p class="border-dashed border-t-1 text-[#c0c0c0]"></p>
-            <div class="mt-0 bg-base-300 px-10 text-lg  grid h-20 place-items-center text-[#363136]">There are several
-                ways to select an element. For example, if you want to select an element by ID, you should use
-                "getElementById", and if you want to select an element by class, you can use "getElementsByClassName".
-            </div>
-        </div>
+            <nav class=" mb-10 shadow-xl mt-10">
+                <div class="flex-1">
+                    <div class="navbar bg-base-100  rounded-xl ">
+                        <div class="flex-1">
+                            <div class="flex p-4  ">
+                                <img class="w-10 h-10 pt-" src="./assets/logo.png" alt="" />
+                                <a class=" text-xl pl-3 pt-1"><span
+                                        class="text-[#00303C] font-normal lg:text-2xl text-2xl">Dev</span><span
+                                        class="lg:text-xl text-2xl text-[#00303C] font-extrabold">
+                                        Board</span></a>
+                            </div>
+                        </div>
+                        <div class="dropdown flex lg:gap-x-5 gap-x-1 ml-16">
+                            <div class=" gap-3 rounded-full py-6 ">
 
-        <!-- 2nd box -->
-        <div class="flex w-full flex-col bg-white">
-            <div class=" bg-base-300 p-7 text-xl grid h-20 font-bold ">Question-2: What is the difference between
-                innerHTML, innerText, and textContent ?</div>
-            <p class="border-dashed border-t-1 text-[#c0c0c0]"></p>
-            <div class="mt-0 bg-base-300 p-5 text-lg px-10 grid h-20 place-items-center text-[#363136]">What I
-                understand is that "innerHTML" can select the entire HTML inside an element and can change the full HTML
-                content. On the other hand, "innerText" only selects and retrieves the text or value inside the element.
-            </div>
-        </div>
+                            </div>
+                            <div class="dropdown dropdown-end mr-8 ">
+                                <button id="back-button"
+                                    class="back-button  btn btn-primary p-6 text-xl bg-[#1a2986] border-none">back to
+                                    Desk</button>
+                            </div>
 
-        <!-- 3rd box -->
-        <div class="flex w-full flex-col bg-white">
-            <div class=" bg-base-300 p-7 text-xl grid h-20 font-bold ">Question-3: What is event delegation in the DOM?
+                        </div>
+                    </div>
+            </nav>
+        </section>
+        <h1 class="text-center font-bold text-2xl">Blogs</h1>
+        <section class="mt-5 mb-10 space-y-8">
+
+            <!-- 1st box -->
+
+            <div class="flex w-full flex-col bg-white">
+                <div class=" bg-base-300 p-7 text-xl grid h-20 font-bold ">Question-1: What are the different ways to
+                    select
+                    an element in the DOM?</div>
+                <p class="border-dashed border-t-1 text-[#c0c0c0]"></p>
+                <div class="mt-0 bg-base-300 px-10 text-lg  grid h-20 place-items-center text-[#363136]">There are
+                    several
+                    ways to select an element. For example, if you want to select an element by ID, you should use
+                    "getElementById", and if you want to select an element by class, you can use
+                    "getElementsByClassName".
+                </div>
             </div>
-            <p class="border-dashed border-t-1 text-[#c0c0c0]"></p>
-            <div class="mt-0 bg-base-300 p-5 text-lg px-10 grid h-20 place-items-center text-[#363136]">In the DOM,
-                event delegation is a technique where you use a single parent element to handle events for all of its
-                child elements, and you only need to use one event listener instead of adding separate event listeners
-                for each child element.
+
+            <!-- 2nd box -->
+            <div class="flex w-full flex-col bg-white">
+                <div class=" bg-base-300 p-7 text-xl grid h-20 font-bold ">Question-2: What is the difference between
+                    innerHTML, innerText, and textContent ?</div>
+                <p class="border-dashed border-t-1 text-[#c0c0c0]"></p>
+                <div class="mt-0 bg-base-300 p-5 text-lg px-10 grid h-20 place-items-center text-[#363136]">What I
+                    understand is that "innerHTML" can select the entire HTML inside an element and can change the full
+                    HTML
+                    content. On the other hand, "innerText" only selects and retrieves the text or value inside the
+                    element.
+                </div>
             </div>
-        </div>
-        <!--4th box -->
-        <div class="flex w-full flex-col bg-white">
-            <div class=" bg-base-300 p-7 text-xl grid h-20 font-bold ">Question-4: What is event bubbling in the DOM?
+
+            <!-- 3rd box -->
+            <div class="flex w-full flex-col bg-white">
+                <div class=" bg-base-300 p-7 text-xl grid h-20 font-bold ">Question-3: What is event delegation in the
+                    DOM?
+                </div>
+                <p class="border-dashed border-t-1 text-[#c0c0c0]"></p>
+                <div class="mt-0 bg-base-300 p-5 text-lg px-10 grid h-20 place-items-center text-[#363136]">In the DOM,
+                    event delegation is a technique where you use a single parent element to handle events for all of
+                    its
+                    child elements, and you only need to use one event listener instead of adding separate event
+                    listeners
+                    for each child element.
+                </div>
             </div>
-            <p class="border-dashed border-t-1 text-[#c0c0c0]"></p>
-            <div class="mt-0 bg-base-300 p-5 text-lg px-10 grid h-20 place-items-center text-[#363136]">In the DOM,
-                event bubbling is when we add an event, it first triggers on the target element, and then slowly moves
-                up towards the parent elements, eventually reaching the document.
+            <!--4th box -->
+            <div class="flex w-full flex-col bg-white">
+                <div class=" bg-base-300 p-7 text-xl grid h-20 font-bold ">Question-4: What is event bubbling in the
+                    DOM?
+                </div>
+                <p class="border-dashed border-t-1 text-[#c0c0c0]"></p>
+                <div class="mt-0 bg-base-300 p-5 text-lg px-10 grid h-20 place-items-center text-[#363136]">In the DOM,
+                    event bubbling is when we add an event, it first triggers on the target element, and then slowly
+                    moves
+                    up towards the parent elements, eventually reaching the document.
+                </div>
             </div>
-        </div>
-        <!-- 5th box -->
-        <div class="flex w-full flex-col bg-white">
-            <div class=" bg-base-300 p-7 text-xl grid h-20 font-bold ">Question-5: How do you create, add, and remove
-                elements using JavaScript?</div>
-            <p class="border-dashed border-t-1 text-[#c0c0c0]"></p>
-            <div class=" bg-base-300 p-6 text-lg grid h-20 place-items-center text-[#363136]">I create an element using
-                createElement, add it using appendChild, and delete it using removeChild.There are other systems as
-                well, but I use these.This feels easier to me.
+            <!-- 5th box -->
+            <div class="flex w-full flex-col bg-white">
+                <div class=" bg-base-300 p-7 text-xl grid h-20 font-bold ">Question-5: How do you create, add, and
+                    remove
+                    elements using JavaScript?</div>
+                <p class="border-dashed border-t-1 text-[#c0c0c0]"></p>
+                <div class=" bg-base-300 p-6 text-lg grid h-20 place-items-center text-[#363136]">I create an element
+                    using
+                    createElement, add it using appendChild, and delete it using removeChild.There are other systems as
+                    well, but I use these.This feels easier to me.
+                </div>
             </div>
-        </div>
+
+        </section>
 
     </section>
-
-   </section>
 
     <script src="./script/index.js"></script>
     <script src="./script/utilities.js"></script>

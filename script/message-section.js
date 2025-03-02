@@ -1,12 +1,8 @@
 function getCurrentTimes(){
     const time = new Date();
-    const currenTime = time.toLocaleTimeString()
+    const currenTime = time.toLocaleTimeString('en-US', {hour: 'numeric', minute: 'numeric', hour12: true})
     return(currenTime)
 }
-//  const time = new Date();
-// const currenTime = time.toLocaleTimeString()
-// console.log(currenTime)
-
 
 function messageText(textMessage){
     const textContainer = document.getElementById('text-container');
@@ -14,7 +10,7 @@ function messageText(textMessage){
     text.classList.add('text');
     const currenTime = getCurrentTimes()
     text.innerHTML = ` 
-      ${textMessage} ${currenTime}
+    ${textMessage} ${currenTime} 
     `
     textContainer.appendChild(text);
     textContainer.style.display = 'block'
