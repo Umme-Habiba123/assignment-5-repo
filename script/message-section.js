@@ -1,6 +1,6 @@
 function getCurrentTimes(){
     const time = new Date();
-    const currenTime = time.toLocaleTimeString('en-US', {hour: 'numeric', minute: 'numeric', hour12: true})
+    const currenTime = time.toLocaleTimeString('en-US', {hour: 'numeric', minute: 'numeric',  second: 'numeric', hour12: true})
     return(currenTime)
 }
 
